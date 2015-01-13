@@ -25,3 +25,11 @@
 - name: change user default shell
   sudo: yes
   user: name={{remote_user}} shell=/usr/bin/zsh
+
+- name: clone .emacs.d
+  git: >-
+    repo=git@github.com:tmtxt/.emacs.d.git
+    dest=~/.emacs.d
+    update=no
+    accept_hostkey=yes
+    recursive=yes
