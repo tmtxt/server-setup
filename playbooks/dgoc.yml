@@ -7,3 +7,21 @@
     dest=~/dotfiles
     update=no
     accept_hostkey=yes
+
+- name: clone oh my zsh
+  sudo: yes
+  sudo_user: "{{remote_user}}"
+  git: >-
+    repo=git@github.com:robbyrussell/oh-my-zsh.git
+    dest=~/.oh-my-zsh
+    update=no
+    accept_hostkey=yes
+
+- name: symlink .zshrc
+  sudo: yes
+  sudo_user: "{{remote_user}}"
+  file: src=~/dotfiles/.zshrc dest=~/.zshrc state=link
+
+- name: change user default shell
+  sudo: yes
+  user: name={{remote_user}} shell=/usr/bin/zsh
