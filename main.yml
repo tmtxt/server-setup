@@ -4,6 +4,7 @@
     - apt
     - git
     - zsh
+    - node
 
   tasks:
     - include: playbooks/dgoc.yml
