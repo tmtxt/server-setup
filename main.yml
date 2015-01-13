@@ -4,8 +4,9 @@
     - apt
     - git
     - zsh
-    - node
+    - nvm
     - emacs
+    - ansible
 
   tasks:
     - include: playbooks/dgoc.yml
