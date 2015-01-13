@@ -5,6 +5,7 @@
     - git
     - zsh
     - node
+    - emacs
 
   tasks:
     - include: playbooks/dgoc.yml
