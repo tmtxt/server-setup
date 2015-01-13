@@ -1,0 +1,6 @@
+---
+- hosts: dgoc
+  roles:
+    - apt
+    - git
+    - zsh
