@@ -9,6 +9,7 @@
 # Configuration
 
 - add hosts in **hosts** file
+- config remote user for the host in **host_vars/hostname**
 
 # Deploy
 
