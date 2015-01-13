@@ -4,7 +4,7 @@
 
 - Create the VPS
 - Create the user (with password and SSH key)
-- Create SSH key and add it to the services like Github
+- Create SSH key (no passphrase) and add it to the services like Github
 
 # Configuration
 

@@ -1,0 +1,9 @@
+---
+- name: clone dot files
+  sudo: yes
+  sudo_user: "{{remote_user}}"
+  git: >-
+    repo=git@github.com:tmtxt/dotfiles.git
+    dest=~/dotfiles
+    update=no
+    accept_hostkey=yes
