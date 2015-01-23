@@ -8,3 +8,6 @@
     - zsh
     - nvm
     - emacs
+
+  tasks:
+    - include: playbooks/emacs.yml
