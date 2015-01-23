@@ -1,8 +1,9 @@
 ---
 - name: clone .emacs.d
+  sudo: yes
+  sudo_user: "{{remote_user}}"
   git: >-
     repo=git@github.com:tmtxt/.emacs.d.git
     dest=~/.emacs.d
     accept_hostkey=yes
-    update=no
     recursive=yes
