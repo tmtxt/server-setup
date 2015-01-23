@@ -12,3 +12,4 @@
   tasks:
     - include: playbooks/emacs.yml
     - include: playbooks/dotfiles.yml
+    - include: playbooks/zsh.yml
