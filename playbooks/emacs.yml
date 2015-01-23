@@ -1,13 +1,8 @@
 ---
-- name: check if .emacs.d is already cloned
-  stat: path=~/.emacs.d
-  register: emacs_config_path
-  changed_when: False
-
 - name: clone .emacs.d
   git: >-
     repo=git@github.com:tmtxt/.emacs.d.git
     dest=~/.emacs.d
     accept_hostkey=yes
+    update=no
     recursive=yes
-  when: not emacs_config_path.stat.exists
