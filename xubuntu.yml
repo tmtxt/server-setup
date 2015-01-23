@@ -1,5 +1,7 @@
 ---
 - hosts: 127.0.0.1
+  vars:
+    remote_user: tmtxt
   roles:
     - apt
     - git
