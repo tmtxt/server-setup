@@ -33,8 +33,15 @@ $ sudo apt-get install git-core
 ```
 
 - Clone the project
-- Run the corresponding playbook for localhost
+
+Run the corresponding playbook for localhost
 
 ```
 $ ansible-playbook xubuntu.yml -K
+```
+
+Or specify a user instead of tmtxt
+
+```
+$ ansible-playbook xubuntu.yml -K --extra-vars "remote_user=some_user"
 ```
