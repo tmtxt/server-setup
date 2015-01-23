@@ -1,0 +1,16 @@
+---
+- name: check if dot files already cloned
+  sudo: yes
+  sudo_user: "{{remote_user}}"
+  stat: path=~/dotfiles
+  register: dotfiles_path
+  changed_when: False
+
+- name: clone dot files
+  sudo: yes
+  sudo_user: "{{remote_user}}"
+  git: >-
+    repo=git@github.com:tmtxt/dotfiles.git
+    dest=~/dotfiles
+    accept_hostkey=yes
+  when: not dotfiles_path.stat.exists
