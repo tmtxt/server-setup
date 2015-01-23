@@ -14,5 +14,5 @@
 # Deploy
 
 ```
-ansible-playbook -i hosts main.yml -K
+ansible-playbook -i hosts playbook.yml -K
 ```
